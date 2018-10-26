@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: sale-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xiaotutu365/sale-system
+          username: xiaotutu365
+          password: turui0719
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: 8090
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
