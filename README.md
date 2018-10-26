@@ -11,9 +11,9 @@
 * mysql 5.7
 
 ### 服务设计
-* 注册中心(trey-eureka)
-* 配置中心(trey-config)
-* 商品服务(trey-product)
-* 订单服务(trey-order)
+* 注册中心(eureka-center)
+* 配置中心(sale-config)
+* 商品服务(sale-product)
+* 订单服务(sale-order)
 
 本系统中的注册中心使用的是eureka，如果对数据要求高一致性，可以使用consul或者zookeeper作为注册中心。这两个注册中心的使用方法在我其它的项目中有讲到。
