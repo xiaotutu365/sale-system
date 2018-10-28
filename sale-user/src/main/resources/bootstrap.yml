@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: sale-user
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: sale-config
+      profile: dev
+      name: user
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: 8091
