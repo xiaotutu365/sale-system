@@ -13,6 +13,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -28,7 +31,10 @@ public class ProductController {
     private CategoryService categoryService;
 
     @GetMapping("/list")
-    public ResultVo<ProductVo> list() {
+//    @CookieValue(name = "openid", value = "abcdef")
+    public ResultVo<ProductVo> list(HttpServletRequest request) {
+//        Cookie cookie = new Cookie("openid", "123456");
+//        request.getHeader()
         // 1.查询所有在架的商品
         List<ProductInfo> productInfoList = productService.findUpAll();
         // 2.获取类目type列表
