@@ -1,14 +1,14 @@
-package com.trey.sale.user.controller;
+package com.trey.user.server.controller;
 
-import com.trey.sale.user.constant.CookieConstant;
-import com.trey.sale.user.constant.RedisConstant;
-import com.trey.sale.user.dataobject.UserInfo;
-import com.trey.sale.user.enums.ResultEnum;
-import com.trey.sale.user.enums.RoleEnum;
-import com.trey.sale.user.service.UserService;
-import com.trey.sale.user.util.CookieUtils;
-import com.trey.sale.user.util.ResultVoUtils;
-import com.trey.sale.user.vo.ResultVo;
+import com.trey.user.server.constant.CookieConstant;
+import com.trey.user.server.constant.RedisConstant;
+import com.trey.user.server.dataobject.UserInfo;
+import com.trey.user.server.enums.ResultEnum;
+import com.trey.user.server.enums.RoleEnum;
+import com.trey.user.server.service.UserService;
+import com.trey.user.server.util.CookieUtils;
+import com.trey.user.server.util.ResultVoUtils;
+import com.trey.user.server.vo.ResultVo;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

@@ -15,3 +15,43 @@ management:
     web:
       exposure:
         include: "*"
+server:
+  port: 8093
+#zuul:
+#  routes:
+#    product:
+#      path: /product-gateway/**
+#      serviceId: sale-product
+#    order:
+#      path: /order-gateway/**
+#      serviceId: sale-order
+
+#################### zuul路由配置 ####################
+########## 传统路由配置 ##########
+#zuul:
+#  routes:
+#    product:
+#      path: /product-gateway/**
+#      serviceId: sale-product
+#ribbon:
+#  eureka:
+#    enabled: true
+#sale-product:
+#  ribbon:
+#    listOfServers: http://localhost:8088/,http://localhost:8089/
+########## 传统路由配置 ##########
+########## 服务路由配置 ##########
+##### 配置方式一 #####
+zuul:
+  routes:
+    product:
+      path: /product-gateway/**
+      serviceId: sale-product
+      sensitive-headers:
+##### 配置方式一 #####
+##### 配置方式二 #####
+#zuul:
+#  routes:
+#    sale-product: /product-gateway/**
+##### 配置方式二 #####
+########## 服务路由配置 ##########

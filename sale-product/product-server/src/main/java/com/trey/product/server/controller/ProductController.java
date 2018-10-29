@@ -34,7 +34,7 @@ public class ProductController {
 //    @CookieValue(name = "openid", value = "abcdef")
     public ResultVo<ProductVo> list(HttpServletRequest request) {
 //        Cookie cookie = new Cookie("openid", "123456");
-//        request.getHeader()
+        String cookie = request.getHeader("cookie");
         // 1.查询所有在架的商品
         List<ProductInfo> productInfoList = productService.findUpAll();
         // 2.获取类目type列表

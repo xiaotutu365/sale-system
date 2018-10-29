@@ -1,4 +1,4 @@
-package com.trey.sale.user.constant;
+package com.trey.user.server.constant;
 
 public class CookieConstant {
     public static String TOKEN = "token";

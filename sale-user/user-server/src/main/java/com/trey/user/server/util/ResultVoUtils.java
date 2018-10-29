@@ -1,8 +1,7 @@
-package com.trey.sale.user.util;
+package com.trey.user.server.util;
 
-
-import com.trey.sale.user.enums.ResultEnum;
-import com.trey.sale.user.vo.ResultVo;
+import com.trey.user.server.enums.ResultEnum;
+import com.trey.user.server.vo.ResultVo;
 
 public class ResultVoUtils {
     /**

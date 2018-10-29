@@ -1,4 +1,4 @@
-package com.trey.sale.user.dataobject;
+package com.trey.user.server.dataobject;
 
 import lombok.Data;
 

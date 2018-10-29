@@ -1,7 +1,7 @@
-package com.trey.sale.user.service;
+package com.trey.user.server.service;
 
-import com.trey.sale.user.dataobject.UserInfo;
-import com.trey.sale.user.repository.UserInfoRepository;
+import com.trey.user.server.dataobject.UserInfo;
+import com.trey.user.server.repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.trey.sale.user.repository;
+package com.trey.user.server.repository;
 
-import com.trey.sale.user.dataobject.UserInfo;
+import com.trey.user.server.dataobject.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserInfoRepository extends JpaRepository<UserInfo, String> {

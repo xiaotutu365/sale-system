@@ -1,4 +1,4 @@
-package com.trey.sale.user.constant;
+package com.trey.user.server.constant;
 
 public class RedisConstant {
     public static String TOKEN_TEMPLATE = "token_%s";

@@ -1,4 +1,4 @@
-package com.trey.sale.user.util;
+package com.trey.user.server.util;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

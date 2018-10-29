@@ -1,4 +1,4 @@
-package com.trey.sale.user.vo;
+package com.trey.user.server.vo;
 
 import lombok.Data;
 
