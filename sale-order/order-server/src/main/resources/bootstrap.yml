@@ -26,3 +26,22 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 server:
   port: 8091
+
+hystrix:
+  command:
+    # 对全局进行配置
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+    # 对单个方法进行配置
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+## feign hystrix使用
+feign:
+  hystrix:
+    enabled: true

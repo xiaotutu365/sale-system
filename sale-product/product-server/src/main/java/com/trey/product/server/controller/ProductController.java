@@ -31,10 +31,7 @@ public class ProductController {
     private CategoryService categoryService;
 
     @GetMapping("/list")
-//    @CookieValue(name = "openid", value = "abcdef")
-    public ResultVo<ProductVo> list(HttpServletRequest request) {
-//        Cookie cookie = new Cookie("openid", "123456");
-        String cookie = request.getHeader("cookie");
+    public ResultVo<ProductVo> list() {
         // 1.查询所有在架的商品
         List<ProductInfo> productInfoList = productService.findUpAll();
         // 2.获取类目type列表
@@ -64,7 +61,7 @@ public class ProductController {
         return ResultVoUtil.success(productVoList);
     }
 
-    @PostMapping("/listForObject")
+    @PostMapping("/listForOrder")
     public List<ProductInfo> listForOrder(@RequestBody List<String> productIdList) {
         return productService.findList(productIdList);
     }

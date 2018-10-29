@@ -90,3 +90,27 @@ zuul:
 ```
 第二种配置方式粒度更小，可以精确到某一个或者某几个具体服务。在微服务架构的API网关之内，对于无状态的RESTful API请求肯定是要远多于这些Web类应用请求的，甚至还有一些架构设计会将Web类应用和App客户端一样都归为API网关之外的客户端应用。
 
+微服务容错
+* 重试
+* 熔断
+
+增加hystrix依赖
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+</dependency>
+```
+
+### 服务降级
+* 依赖隔离
+线程池隔离
+Hystrix自动实现了依赖隔离
+### 服务熔断
+Circuit Breaker:断路器，自我保护
+
+circuitBreaker.requestVolumeThreshold --> 10
+circuitBreaker.sleepWindowInMilliseconds --> 10000 --> 半开
+circuitBreaker.errorThresholdPercentage --> 60
+
+open    half open   close
